@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Add Book{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="display-3" >⚠️Warning⚠️</h1>
+      <div><p class="display-6">Are you sure you want to delete this book? </p></div>
+      <form action="{{ url_for('delete') }}" method="POST">
+        {% include "includes/edit_form.html" %}
+        <button type="submit">Delete</button>
+    </form>
+  </div>
+  </div>
+</div>
+</div>
+{% endblock %}

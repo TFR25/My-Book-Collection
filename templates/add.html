@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Add Book{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="display-6">📚Add Book📚</h1>
+      <form action="{{ url_for('add') }}" method="POST">
+        <label class="display-6">Title</label>
+        <input type="text" name="title"/>
+        <label class="display-6">Author</label>
+        <input type="text" name="author"/>
+        <label class="display-6">Rating</label>
+        <select name="rating">
+          <option>--</option>
+          <option>⭐</option>
+          <option>⭐⭐</option>
+          <option>⭐⭐⭐</option>
+          <option>⭐⭐⭐⭐</option>
+          <option>⭐⭐⭐⭐⭐</option>
+        </select>
+      <button type="submit">Add Book</button>
+    </form>
+  </div>
+  </div>
+</div>
+</div>
+{% endblock %}
+
